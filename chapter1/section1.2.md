@@ -1,2 +1,110 @@
-# Section1.2
+## 多表查询
 
+此章节数据、表结构、表关系等与上章节中一致
+
+Django提供了一种强大而直观的方式来“跟踪”查找中的关系JOIN，在后台自动为您处理SQL 。要跨越关系，只需使用跨模型的相关字段的字段名称，用双下划线分隔，直到到达所需的字段
+
+##### 导入模型
+```python
+In [1]: from polls.models import Book,Author,Publisher
+```
+##### 1、根据作者表中的作者名称来查询该作者对应的书籍
+只需要使用 `authors__name`来指定作者名称即可  
+这里的`authors` 指的是`Book` 表中的字段，此字段对应的关系表为`Author` 表  
+
+```python
+In [6]: result = Book.objects.filter(authors__name='曹雪芹')
+
+In [7]: result
+Out[7]: <QuerySet [<Book: Book object (1)>]>
+
+In [8]: result[0]
+Out[8]: <Book: Book object (1)>
+
+In [9]: result[0].name
+Out[9]: '红楼梦'
+
+```
+
+##### 2、也可以反向查找，通过书籍的名称来查询作者信息
+使用 `book__name`来进行查询，这里的book 是模型 `Book` 的小写形式
+```python
+In [14]: result1 = Author.objects.filter(book__name='三国演义')
+
+In [15]: result1
+Out[15]: <QuerySet [<Author: Author object (4)>]>
+
+In [16]: 
+
+In [16]: result1[0]
+Out[16]: <Author: Author object (4)>
+
+In [17]: result1[0].name
+Out[17]: '罗贯中'
+
+In [18]: result1[0].pk
+Out[18]: 4
+
+In [19]: result1[0].age
+Out[19]: 58
+
+```
+
+##### 3、跨多表（三张表）的查询：根据作者信息查询出版社信息
+
+```python
+In [21]: result2 = Publisher.objects.filter(book__authors__name='吴承恩')
+
+In [22]: result2
+Out[22]: <QuerySet [<Publisher: Publisher object (3)>]>
+
+In [24]: result2[0].name
+Out[24]: '人民日报'
+
+In [25]: result2[0].id
+Out[25]: 3
+
+```
+
+##### 4、跨多值的查询
+- 根据作者的姓名 和 书籍的发布时间 来查询出版社信息（三张表）
+- 查询作者是 曹雪芹 `且` 发布年份是2019 年的出版社信息 
+
+```python
+In [35]: result3 = Publisher.objects.filter(book__authors__name='曹雪芹',book__pubdate__year=2019)
+    # 这里作者的姓名不能直接写book__authors ，因为book__authors 是一个多对多字段
+    #__year 表示取日期的年份部分
+
+In [36]: result3
+Out[36]: <QuerySet [<Publisher: Publisher object (1)>]>
+
+In [37]: result3[0]
+Out[37]: <Publisher: Publisher object (1)>
+
+In [38]: result3[0].name
+Out[38]: '清华大学'
+
+In [39]: result3[0].id
+Out[39]: 1
+
+```
+- 根据价格 和 发布时间 查询出版社信息（两张表）
+- 查询书籍的价格小于等于200 `且` 发布年份是2019 年的出版社信息
+```python
+In [40]: result4 = Publisher.objects.filter(book__price__lte=200,book__pubdate__year=2019)
+
+In [41]: result4
+Out[41]: <QuerySet [<Publisher: Publisher object (1)>, <Publisher: Publisher object (1)>]>
+
+In [42]: result4[0]
+Out[42]: <Publisher: Publisher object (1)>
+
+In [43]: result4[1]
+Out[43]: <Publisher: Publisher object (1)>
+
+In [44]: result4[1].name
+Out[44]: '清华大学'
+
+In [45]: result4[0].name
+Out[45]: '清华大学'
+```
