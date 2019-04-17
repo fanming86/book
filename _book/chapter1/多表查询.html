@@ -1,0 +1,430 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2-多表查询 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="自定义admin.html" />
+    
+    
+    <link rel="prev" href="聚合函数.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    django 数据库操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="聚合函数.html">
+            
+                <a href="聚合函数.html">
+            
+                    
+                    1.1-聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="多表查询.html">
+            
+                <a href="多表查询.html">
+            
+                    
+                    1.2-多表查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="自定义admin.html">
+            
+                <a href="自定义admin.html">
+            
+                    
+                    1.3-自定义admin站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../request_response/request_response.html">
+            
+                <a href="../request_response/request_response.html">
+            
+                    
+                    request和response
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../request_response/request请求.html">
+            
+                <a href="../request_response/request请求.html">
+            
+                    
+                    1-request请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../from/表单.html">
+            
+                <a href="../from/表单.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2-多表查询</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="11-&#x591A;&#x8868;&#x67E5;&#x8BE2;">1.1-&#x591A;&#x8868;&#x67E5;&#x8BE2;</h2>
+<p>&#x6B64;&#x7AE0;&#x8282;&#x6570;&#x636E;&#x3001;&#x8868;&#x7ED3;&#x6784;&#x3001;&#x8868;&#x5173;&#x7CFB;&#x7B49;&#x4E0E;&#x4E0A;&#x7AE0;&#x8282;&#x4E2D;&#x4E00;&#x81F4;</p>
+<p>Django&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5F3A;&#x5927;&#x800C;&#x76F4;&#x89C2;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x201C;&#x8DDF;&#x8E2A;&#x201D;&#x67E5;&#x627E;&#x4E2D;&#x7684;&#x5173;&#x7CFB;JOIN&#xFF0C;&#x5728;&#x540E;&#x53F0;&#x81EA;&#x52A8;&#x4E3A;&#x60A8;&#x5904;&#x7406;SQL &#x3002;&#x8981;&#x8DE8;&#x8D8A;&#x5173;&#x7CFB;&#xFF0C;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x8DE8;&#x6A21;&#x578B;&#x7684;&#x76F8;&#x5173;&#x5B57;&#x6BB5;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#xFF0C;&#x7528;&#x53CC;&#x4E0B;&#x5212;&#x7EBF;&#x5206;&#x9694;&#xFF0C;&#x76F4;&#x5230;&#x5230;&#x8FBE;&#x6240;&#x9700;&#x7684;&#x5B57;&#x6BB5;</p>
+<h5 id="&#x5BFC;&#x5165;&#x6A21;&#x578B;">&#x5BFC;&#x5165;&#x6A21;&#x578B;</h5>
+<pre><code class="lang-python">In [<span class="hljs-number">1</span>]: <span class="hljs-keyword">from</span> polls.models <span class="hljs-keyword">import</span> Book,Author,Publisher
+</code></pre>
+<h5 id="1&#x3001;&#x6839;&#x636E;&#x4F5C;&#x8005;&#x8868;&#x4E2D;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x79F0;&#x6765;&#x67E5;&#x8BE2;&#x8BE5;&#x4F5C;&#x8005;&#x5BF9;&#x5E94;&#x7684;&#x4E66;&#x7C4D;">1&#x3001;&#x6839;&#x636E;&#x4F5C;&#x8005;&#x8868;&#x4E2D;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x79F0;&#x6765;&#x67E5;&#x8BE2;&#x8BE5;&#x4F5C;&#x8005;&#x5BF9;&#x5E94;&#x7684;&#x4E66;&#x7C4D;</h5>
+<p>&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>authors__name</code>&#x6765;&#x6307;&#x5B9A;&#x4F5C;&#x8005;&#x540D;&#x79F0;&#x5373;&#x53EF;<br>&#x8FD9;&#x91CC;&#x7684;<code>authors</code> &#x6307;&#x7684;&#x662F;<code>Book</code> &#x8868;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6B64;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#x8868;&#x4E3A;<code>Author</code> &#x8868;  </p>
+<pre><code class="lang-python">In [<span class="hljs-number">6</span>]: result = Book.objects.filter(authors__name=<span class="hljs-string">&apos;&#x66F9;&#x96EA;&#x82B9;&apos;</span>)
+
+In [<span class="hljs-number">7</span>]: result
+Out[<span class="hljs-number">7</span>]: &lt;QuerySet [&lt;Book: Book object (<span class="hljs-number">1</span>)&gt;]&gt;
+
+In [<span class="hljs-number">8</span>]: result[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">8</span>]: &lt;Book: Book object (<span class="hljs-number">1</span>)&gt;
+
+In [<span class="hljs-number">9</span>]: result[<span class="hljs-number">0</span>].name
+Out[<span class="hljs-number">9</span>]: <span class="hljs-string">&apos;&#x7EA2;&#x697C;&#x68A6;&apos;</span>
+</code></pre>
+<h5 id="2&#x3001;&#x4E5F;&#x53EF;&#x4EE5;&#x53CD;&#x5411;&#x67E5;&#x627E;&#xFF0C;&#x901A;&#x8FC7;&#x4E66;&#x7C4D;&#x7684;&#x540D;&#x79F0;&#x6765;&#x67E5;&#x8BE2;&#x4F5C;&#x8005;&#x4FE1;&#x606F;">2&#x3001;&#x4E5F;&#x53EF;&#x4EE5;&#x53CD;&#x5411;&#x67E5;&#x627E;&#xFF0C;&#x901A;&#x8FC7;&#x4E66;&#x7C4D;&#x7684;&#x540D;&#x79F0;&#x6765;&#x67E5;&#x8BE2;&#x4F5C;&#x8005;&#x4FE1;&#x606F;</h5>
+<p>&#x4F7F;&#x7528; <code>book__name</code>&#x6765;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;book &#x662F;&#x6A21;&#x578B; <code>Book</code> &#x7684;&#x5C0F;&#x5199;&#x5F62;&#x5F0F;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">14</span>]: result1 = Author.objects.filter(book__name=<span class="hljs-string">&apos;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&apos;</span>)
+
+In [<span class="hljs-number">15</span>]: result1
+Out[<span class="hljs-number">15</span>]: &lt;QuerySet [&lt;Author: Author object (<span class="hljs-number">4</span>)&gt;]&gt;
+
+In [<span class="hljs-number">16</span>]: 
+
+In [<span class="hljs-number">16</span>]: result1[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">16</span>]: &lt;Author: Author object (<span class="hljs-number">4</span>)&gt;
+
+In [<span class="hljs-number">17</span>]: result1[<span class="hljs-number">0</span>].name
+Out[<span class="hljs-number">17</span>]: <span class="hljs-string">&apos;&#x7F57;&#x8D2F;&#x4E2D;&apos;</span>
+
+In [<span class="hljs-number">18</span>]: result1[<span class="hljs-number">0</span>].pk
+Out[<span class="hljs-number">18</span>]: <span class="hljs-number">4</span>
+
+In [<span class="hljs-number">19</span>]: result1[<span class="hljs-number">0</span>].age
+Out[<span class="hljs-number">19</span>]: <span class="hljs-number">58</span>
+</code></pre>
+<h5 id="3&#x3001;&#x8DE8;&#x591A;&#x8868;&#xFF08;&#x4E09;&#x5F20;&#x8868;&#xFF09;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x6839;&#x636E;&#x4F5C;&#x8005;&#x4FE1;&#x606F;&#x67E5;&#x8BE2;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F;">3&#x3001;&#x8DE8;&#x591A;&#x8868;&#xFF08;&#x4E09;&#x5F20;&#x8868;&#xFF09;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x6839;&#x636E;&#x4F5C;&#x8005;&#x4FE1;&#x606F;&#x67E5;&#x8BE2;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F;</h5>
+<pre><code class="lang-python">In [<span class="hljs-number">21</span>]: result2 = Publisher.objects.filter(book__authors__name=<span class="hljs-string">&apos;&#x5434;&#x627F;&#x6069;&apos;</span>)
+
+In [<span class="hljs-number">22</span>]: result2
+Out[<span class="hljs-number">22</span>]: &lt;QuerySet [&lt;Publisher: Publisher object (<span class="hljs-number">3</span>)&gt;]&gt;
+
+In [<span class="hljs-number">24</span>]: result2[<span class="hljs-number">0</span>].name
+Out[<span class="hljs-number">24</span>]: <span class="hljs-string">&apos;&#x4EBA;&#x6C11;&#x65E5;&#x62A5;&apos;</span>
+
+In [<span class="hljs-number">25</span>]: result2[<span class="hljs-number">0</span>].id
+Out[<span class="hljs-number">25</span>]: <span class="hljs-number">3</span>
+</code></pre>
+<h5 id="4&#x3001;&#x8DE8;&#x591A;&#x503C;&#x7684;&#x67E5;&#x8BE2;">4&#x3001;&#x8DE8;&#x591A;&#x503C;&#x7684;&#x67E5;&#x8BE2;</h5>
+<ul>
+<li>&#x6839;&#x636E;&#x4F5C;&#x8005;&#x7684;&#x59D3;&#x540D; &#x548C; &#x4E66;&#x7C4D;&#x7684;&#x53D1;&#x5E03;&#x65F6;&#x95F4; &#x6765;&#x67E5;&#x8BE2;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F;&#xFF08;&#x4E09;&#x5F20;&#x8868;&#xFF09;</li>
+<li>&#x67E5;&#x8BE2;&#x4F5C;&#x8005;&#x662F; &#x66F9;&#x96EA;&#x82B9; <code>&#x4E14;</code> &#x53D1;&#x5E03;&#x5E74;&#x4EFD;&#x662F;2019 &#x5E74;&#x7684;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F; </li>
+</ul>
+<pre><code class="lang-python">In [<span class="hljs-number">35</span>]: result3 = Publisher.objects.filter(book__authors__name=<span class="hljs-string">&apos;&#x66F9;&#x96EA;&#x82B9;&apos;</span>,book__pubdate__year=<span class="hljs-number">2019</span>)
+    <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x4F5C;&#x8005;&#x7684;&#x59D3;&#x540D;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5199;book__authors &#xFF0C;&#x56E0;&#x4E3A;book__authors &#x662F;&#x4E00;&#x4E2A;&#x591A;&#x5BF9;&#x591A;&#x5B57;&#x6BB5;</span>
+    <span class="hljs-comment">#__year &#x8868;&#x793A;&#x53D6;&#x65E5;&#x671F;&#x7684;&#x5E74;&#x4EFD;&#x90E8;&#x5206;</span>
+
+In [<span class="hljs-number">36</span>]: result3
+Out[<span class="hljs-number">36</span>]: &lt;QuerySet [&lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;]&gt;
+
+In [<span class="hljs-number">37</span>]: result3[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">37</span>]: &lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;
+
+In [<span class="hljs-number">38</span>]: result3[<span class="hljs-number">0</span>].name
+Out[<span class="hljs-number">38</span>]: <span class="hljs-string">&apos;&#x6E05;&#x534E;&#x5927;&#x5B66;&apos;</span>
+
+In [<span class="hljs-number">39</span>]: result3[<span class="hljs-number">0</span>].id
+Out[<span class="hljs-number">39</span>]: <span class="hljs-number">1</span>
+</code></pre>
+<ul>
+<li>&#x6839;&#x636E;&#x4EF7;&#x683C; &#x548C; &#x53D1;&#x5E03;&#x65F6;&#x95F4; &#x67E5;&#x8BE2;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F;&#xFF08;&#x4E24;&#x5F20;&#x8868;&#xFF09;</li>
+<li>&#x67E5;&#x8BE2;&#x4E66;&#x7C4D;&#x7684;&#x4EF7;&#x683C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;200 <code>&#x4E14;</code> &#x53D1;&#x5E03;&#x5E74;&#x4EFD;&#x662F;2019 &#x5E74;&#x7684;&#x51FA;&#x7248;&#x793E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python">In [<span class="hljs-number">40</span>]: result4 = Publisher.objects.filter(book__price__lte=<span class="hljs-number">200</span>,book__pubdate__year=<span class="hljs-number">2019</span>)
+
+In [<span class="hljs-number">41</span>]: result4
+Out[<span class="hljs-number">41</span>]: &lt;QuerySet [&lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;, &lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;]&gt;
+
+In [<span class="hljs-number">42</span>]: result4[<span class="hljs-number">0</span>]
+Out[<span class="hljs-number">42</span>]: &lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;
+
+In [<span class="hljs-number">43</span>]: result4[<span class="hljs-number">1</span>]
+Out[<span class="hljs-number">43</span>]: &lt;Publisher: Publisher object (<span class="hljs-number">1</span>)&gt;
+
+In [<span class="hljs-number">44</span>]: result4[<span class="hljs-number">1</span>].name
+Out[<span class="hljs-number">44</span>]: <span class="hljs-string">&apos;&#x6E05;&#x534E;&#x5927;&#x5B66;&apos;</span>
+
+In [<span class="hljs-number">45</span>]: result4[<span class="hljs-number">0</span>].name
+Out[<span class="hljs-number">45</span>]: <span class="hljs-string">&apos;&#x6E05;&#x534E;&#x5927;&#x5B66;&apos;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="聚合函数.html" class="navigation navigation-prev " aria-label="Previous page: 1.1-聚合函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="自定义admin.html" class="navigation navigation-next " aria-label="Next page: 1.3-自定义admin站点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2-多表查询","level":"1.2.2","depth":2,"next":{"title":"1.3-自定义admin站点","level":"1.2.3","depth":2,"path":"chapter1/自定义admin.md","ref":"chapter1/自定义admin.md","articles":[]},"previous":{"title":"1.1-聚合函数","level":"1.2.1","depth":2,"path":"chapter1/聚合函数.md","ref":"chapter1/聚合函数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/多表查询.md","mtime":"2019-04-17T07:50:22.200Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T09:16:28.245Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
