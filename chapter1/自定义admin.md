@@ -35,6 +35,7 @@ admin.site.register(Author)
 LANGUAGE_CODE = 'zh-Hans'       #设置为中文
 
 TIME_ZONE = 'Asia/Shanghai'     #修改时区为shanghai
+
 ```
 
 
