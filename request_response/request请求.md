@@ -73,7 +73,7 @@ urlpatterns = [
 </head>
 <body>
     <form action="/searchPost" method="post">
-        {% csrf_token %}
+        {% csrf_token %}     <!--csrf 全称是 Cross Site Request Forgery-->
         <input type="text" name="q">
         <input type="submit" value="Submit">
     </form>
@@ -84,7 +84,6 @@ urlpatterns = [
 
 ```
 * 这里的p 标签中引用一个变量，用来接收返回值  
-* *\{\% csrf_token \%\}的标签。csrf 全称是 Cross Site Request Forgery*  
 * *这是Django提供的防止伪装提交请求的功能。POST 方法提交的表格，必须有此标签*
 
 
