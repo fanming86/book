@@ -73,7 +73,7 @@ urlpatterns = [
 </head>
 <body>
     <form action="/searchPost" method="post">
-        {% `csrf_token` %}     <!--csrf 全称是 Cross Site Request Forgery-->
+        {%% csrf_token %%}     <!--csrf 全称是 Cross Site Request Forgery-->
         <input type="text" name="q">
         <input type="submit" value="Submit">
     </form>
