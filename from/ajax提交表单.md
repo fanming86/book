@@ -15,7 +15,7 @@ $("#sub").click(function (e) {
     });
     $.ajax({
         type: 'post',
-        url: "{% url 'froms:po' %}",
+        url: "{\% url 'froms:po' \%}",
         data: {
             'phoneNum': $('#id_phoneNum').val(),  //获取content文本框中的值
             'name': $('#id_name').val(),
