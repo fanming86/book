@@ -1,4 +1,4 @@
-# 1.3-自定义admin站点
+# 自定义admin站点
 ---
 **如果只是在admin后台管理页面中展示及管理模型，需要在`admin.py`文件中使用`admin.site.register`注册模型**
 ```python
