@@ -1,509 +1,534 @@
-
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="en" >
+    <!-- Start book django -->
     <head>
+        <!-- head:start -->
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>从模型创建表单 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>从模型创建表单 | django</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
-    
     <link rel="stylesheet" href="../gitbook/style.css">
-
     
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
         
-
-    
-
-    
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
         
     
         
-    
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
         
     
         
-    
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
         
     
         
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
     
 
         
     
     
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="自定义表单.html" />
+    <link rel="next" href="../from/自定义表单.html" />
     
     
-    <link rel="prev" href="表单.html" />
+    <link rel="prev" href="../from/表单.html" />
     
 
+        <!-- head:end -->
     </head>
     <body>
+        <!-- body:start -->
         
-<div class="book">
-    <div class="book-summary">
-        
+    <div class="book"
+        data-level="3.2"
+        data-chapter-title="从模型创建表单"
+        data-filepath="from/从模型创建表单.md"
+        data-basepath=".."
+        data-revision="Wed Jul 24 2019 10:31:34 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
             
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+            
+            
+                
+                <li>
+                    <a href="http://ifanm.com" target="blank" class="custom-link">Home</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="request_response/index.html">
+            
+                
+                    <a href="../request_response/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        request和response
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="request_response/urlsRoute.html">
+            
+                
+                    <a href="../request_response/urlsRoute.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        使用路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="request_response/request_response.html">
+            
+                
+                    <a href="../request_response/request_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        request&amp;response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="request_response/request请求.html">
+            
+                
+                    <a href="../request_response/request请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        request请求
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter1/index.html">
+            
+                
+                    <a href="../chapter1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        django 数据库操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter1/生成数据表.html">
+            
+                
+                    <a href="../chapter1/生成数据表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        生成数据表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter1/基本查询.html">
+            
+                
+                    <a href="../chapter1/基本查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        基本查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter1/聚合函数.html">
+            
+                
+                    <a href="../chapter1/聚合函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        聚合函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter1/多表查询.html">
+            
+                
+                    <a href="../chapter1/多表查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        多表查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter1/自定义admin.html">
+            
+                
+                    <a href="../chapter1/自定义admin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        自定义admin站点
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="from/index.html">
+            
+                
+                    <a href="../from/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        表单
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="from/表单.html">
+            
+                
+                    <a href="../from/表单.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        表单
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="from/从模型创建表单.html">
+            
+                
+                    <a href="../from/从模型创建表单.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        从模型创建表单
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="from/自定义表单.html">
+            
+                
+                    <a href="../from/自定义表单.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        自定义表单
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="from/自定义验证.html">
+            
+                
+                    <a href="../from/自定义验证.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        自定义验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="from/ajax提交表单.html">
+            
+                
+                    <a href="../from/ajax提交表单.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        ajax提交表单
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="staticFile/index.html">
+            
+                
+                    <a href="../staticFile/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="staticFile/静态文件.html">
+            
+                
+                    <a href="../staticFile/静态文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="staticFile/文件上传.html">
+            
+                
+                    <a href="../staticFile/文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        文件上传
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="example/index.html">
+            
+                
+                    <a href="../example/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        实例
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="example/点击加载更多.html">
+            
+                
+                    <a href="../example/点击加载更多.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        ajax 点击加载更多
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="dep/index.html">
+            
+                
+                    <a href="../dep/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        django部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="dep/depDjango.html">
+            
+                
+                    <a href="../dep/depDjango.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        部署django
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://ifanm.com" target="_blank" class="custom-link">Home</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="../chapter1/">
-            
-                <a href="../chapter1/">
-            
-                    
-                    django 数据库操作
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="../chapter1/生成数据表.html">
-            
-                <a href="../chapter1/生成数据表.html">
-            
-                    
-                    生成数据表
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="../chapter1/基本查询.html">
-            
-                <a href="../chapter1/基本查询.html">
-            
-                    
-                    基本查询
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="../chapter1/聚合函数.html">
-            
-                <a href="../chapter1/聚合函数.html">
-            
-                    
-                    聚合函数
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.4" data-path="../chapter1/多表查询.html">
-            
-                <a href="../chapter1/多表查询.html">
-            
-                    
-                    多表查询
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.5" data-path="../chapter1/自定义admin.html">
-            
-                <a href="../chapter1/自定义admin.html">
-            
-                    
-                    自定义admin站点
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../request_response/">
-            
-                <a href="../request_response/">
-            
-                    
-                    request和response
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="../request_response/request_response.html">
-            
-                <a href="../request_response/request_response.html">
-            
-                    
-                    request&response
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../request_response/request请求.html">
-            
-                <a href="../request_response/request请求.html">
-            
-                    
-                    request请求
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    表单
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="表单.html">
-            
-                <a href="表单.html">
-            
-                    
-                    表单
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.4.2" data-path="从模型创建表单.html">
-            
-                <a href="从模型创建表单.html">
-            
-                    
-                    从模型创建表单
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="自定义表单.html">
-            
-                <a href="自定义表单.html">
-            
-                    
-                    自定义表单
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="自定义验证.html">
-            
-                <a href="自定义验证.html">
-            
-                    
-                    自定义验证
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.5" data-path="ajax提交表单.html">
-            
-                <a href="ajax提交表单.html">
-            
-                    
-                    ajax提交表单
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../staticFile/">
-            
-                <a href="../staticFile/">
-            
-                    
-                    静态文件
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../staticFile/静态文件.html">
-            
-                <a href="../staticFile/静态文件.html">
-            
-                    
-                    静态文件
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.2" data-path="../staticFile/文件上传.html">
-            
-                <a href="../staticFile/文件上传.html">
-            
-                    
-                    文件上传
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="../example/">
-            
-                <a href="../example/">
-            
-                    
-                    实例
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1" data-path="../example/点击加载更多.html">
-            
-                <a href="../example/点击加载更多.html">
-            
-                    
-                    ajax 点击加载更多
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7" data-path="../dep/">
-            
-                <a href="../dep/">
-            
-                    
-                    django部署
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.7.1" data-path="../dep/depDjango.html">
-            
-                <a href="../dep/depDjango.html">
-            
-                    
-                    部署django
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
     <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >从模型创建表单</a>
+        <a href="../" >django</a>
     </h1>
 </div>
 
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;"><b>1. </b>1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;"><b>1.1.1. </b>&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;</a></li></ul></ul></ul></div><a href="#1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;"><a name="1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;" class="anchor-navigation-ex-anchor" href="#1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>1. 1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;</h1>
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="1&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;">1-&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;</h1>
 <hr>
 <p>&#x5982;&#x679C;&#x60A8;&#x6B63;&#x5728;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x60A8;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5230;&#x4E0E;Django&#x6A21;&#x578B;&#x5BC6;&#x5207;&#x76F8;&#x5173;&#x7684;&#x8868;&#x5355;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A; BlogComment &#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x60A8;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8BA9;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x8BC4;&#x8BBA;&#x7684;&#x8868;&#x5355;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x662F;&#x591A;&#x4F59;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x5DF2;&#x7ECF;&#x5728;&#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x5B57;&#x6BB5;&#x3002;</p>
 <p>&#x56E0;&#x6B64;&#xFF0C;Django &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x7C7B;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x4E00;&#x4E2A; Django &#x6A21;&#x578B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Form &#x7C7B;&#x3002;
 &#x6765;&#x81EA;Django&#x5B98;&#x7F51; <a href="https://docs.djangoproject.com/zh-hans/2.2/topics/forms/modelforms/" target="_blank">https://docs.djangoproject.com/zh-hans/2.2/topics/forms/modelforms/</a></p>
-<h3 id="&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;"><a name="&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;</h3>
+<h3 id="&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;">&#x4ECE;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x8868;&#x5355;&#x6B65;&#x9AA4;</h3>
 <blockquote>
 <p>&#x4ECE;django.forms&#x5BFC;&#x5165;ModelForm<br>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x65B0;&#x7C7B;&#xFF08;&#x5373;&#x6784;&#x5EFA;&#x8868;&#x5355;&#x7684;&#x7C7B;&#xFF09;&#xFF0C;&#x7EE7;&#x627F;ModelForm<br>&#x5728;&#x65B0;&#x7C7B;&#x91CC;&#xFF0C;&#x8BBE;&#x7F6E;&#x5143;&#x7C7B;Meta<br>&#x5728;Meta&#x4E2D;&#xFF0C;&#x8BBE;&#x7F6E;model&#x5C5E;&#x6027;&#x4E3A;&#x4F60;&#x8981;&#x5173;&#x8054;&#x7684;ORM&#x6A21;&#x578B;<br>&#x5728;Meta&#x4E2D;&#xFF0C;&#x8BBE;&#x7F6E;fields&#x5C5E;&#x6027;&#x4E3A;&#x4F60;&#x8981;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x5217;&#x8868;<br>fields&#x5217;&#x8868;&#x91CC;&#x7684;&#x503C;&#xFF0C;&#x662F;ORM&#x6A21;&#x578B;model&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x540D;  </p>
 </blockquote>
-<h4 id="modelspy"><a name="modelspy" class="anchor-navigation-ex-anchor" href="#modelspy"><i class="fa fa-link" aria-hidden="true"></i></a><code>models.py</code></h4>
+<h4 id="modelspy"><code>models.py</code></h4>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
 
 <span class="hljs-comment"># Create your models here.</span>
@@ -524,7 +549,7 @@
 <blockquote>
 <p><strong>&#x5B57;&#x6BB5;&#x4F1A;&#x6309;&#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x987A;&#x5E8F;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x51FA;&#x73B0;&#xFF0C; ManyToManyField &#x4F1A;&#x6392;&#x5728;&#x6700;&#x540E;<br>&#x53E6;&#x5916;&#xFF0C;Django&#x6709;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;&#x5982;&#x679C;&#x60A8;&#x5728;&#x6A21;&#x578B;&#x5B57;&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86; editable=False &#xFF0C; <em>&#x4EFB;&#x4F55;</em>&#x4F7F;&#x7528; ModelForm &#x7ED9;&#x8BE5;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x7684;&#x8868;&#x5355;&#x90FD;&#x4E0D;&#x4F1A;&#x5305;&#x542B;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</strong></p>
 </blockquote>
-<h4 id="viewspy"><a name="viewspy" class="anchor-navigation-ex-anchor" href="#viewspy"><i class="fa fa-link" aria-hidden="true"></i></a><code>views.py</code></h4>
+<h4 id="viewspy"><code>views.py</code></h4>
 <pre><code class="lang-python">
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span>  AddForm
 
@@ -541,94 +566,62 @@
         form = AddForm()
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;form.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
 </code></pre>
-<h5 id="&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urlspy-indexhtml&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;"><a name="&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urlspy-indexhtml&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;" class="anchor-navigation-ex-anchor" href="#&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urlspy-indexhtml&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urls.py index.html&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;</h5>
+<h5 id="&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urlspy-indexhtml&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;">&#x6B64;&#x4F8B;&#x4E2D;&#x7684;urls.py index.html&#x7B49;&#x6B64;&#x7AE0;&#x672A;&#x5217;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5747;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x76F8;&#x540C;</h5>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; ifanm.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
 2019-04-19 15:48:17
 </span></footer>
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
+                    
+                    </section>
                 
+                
+                </div>
             </div>
+        </div>
 
-            
-                
-                <a href="表单.html" class="navigation navigation-prev " aria-label="Previous page: 表单">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="自定义表单.html" class="navigation navigation-next " aria-label="Next page: 自定义表单">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
+        
+        <a href="../from/表单.html" class="navigation navigation-prev " aria-label="Previous page: 表单"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../from/自定义表单.html" class="navigation navigation-next " aria-label="Next page: 自定义表单"><i class="fa fa-angle-right"></i></a>
         
     </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"从模型创建表单","level":"1.4.2","depth":2,"next":{"title":"自定义表单","level":"1.4.3","depth":2,"path":"from/自定义表单.md","ref":"from/自定义表单.md","articles":[]},"previous":{"title":"表单","level":"1.4.1","depth":2,"path":"from/表单.md","ref":"from/表单.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchor-navigation-ex","tbfed-pagefooter","toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ifanm.com 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"tocLevel4Icon":"fa fa-hand-o-right","printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://ifanm.com"}},"gitbook":"*"},"file":{"path":"from/从模型创建表单.md","mtime":"2019-04-19T07:48:17.561Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-22T08:55:03.935Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
 </div>
 
         
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
+<script src="../gitbook/app.js"></script>
+
     
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
     
 
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"anchor-navigation-ex":{"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","tocLevel4Icon":"fa fa-hand-o-right","isRewritePageTitle":true},"tbfed-pagefooter":{"copyright":"Copyright &copy ifanm.com 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"expandable-chapters-small":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
     </body>
+    <!-- End of book django -->
 </html>
-
